@@ -146,7 +146,20 @@ table:
   border_width: $base_border_width
   # HACK accounting for line-height
   cell_padding: [3, 3, 6, 3]
+header:
+  height: 0.75in
+  line_height: 1
+  recto_content:
+    center: 'v{revnumber}, {docdate}'
+  verso_content:
+    center: $header_recto_content
 footer:
+  border_color: 'dddddd'
   font_size: $base_font_size_small
   font_color: $base_font_color
-  border_color: 'dddddd'
+  height: 0.75in
+  line_height: 1
+  recto_content:
+    right: '{section-or-chapter-title} | *{page-number}*'
+  verso_content:
+    left: '*{page-number}* | {chapter-title}'
